@@ -16,6 +16,12 @@ class ReplacerTests(unittest.TestCase):
             {"a": "c"}
         )
 
+        # Just a list as input
+        self.assertEqual(
+            json_replacer(["a", "{{x}}", "c"], {"x": "b"}),
+            ["a", "b", "c"]
+        )
+
         # Nested list support
         self.assertEqual(
             json_replacer({"a": 2, "c": [21, "x{{y}}x"]}, {"y": "z"}),

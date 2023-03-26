@@ -15,7 +15,7 @@ def __json_replacer(pyinput, pytokens: dict):
     if isinstance(pyinput, list):
         for i in range(len(pyinput)):
             pyinput[i] = __json_replacer(pyinput[i], pytokens)
-            return
+        return pyinput
 
     if not isinstance(pyinput, dict):
         return pyinput
