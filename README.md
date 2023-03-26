@@ -8,7 +8,7 @@ tokens: `{"name": "Lorenzo"}`
 output: `{"greet": "hello Lorenzo"}`
 
 # 🚀 Installation
-- Install it running `pip install json_replacer` in your command prompt
+- Install it running `pip install json-replacer` in your command prompt
 - Import it in your project `from json_replacer import json_replacer`
 - Enjoy the package :)
 
