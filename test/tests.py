@@ -1,5 +1,5 @@
 import unittest
-from json_replacer import json_replacer
+from json_replacer.json_replacer import json_replacer
 
 
 class ReplacerTests(unittest.TestCase):

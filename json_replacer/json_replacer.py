@@ -1,5 +1,6 @@
+from __future__ import annotations
 import json
-from utils import __json_replacer
+from .utils import __json_replacer
 
 
 def json_replacer(
@@ -14,10 +15,12 @@ def json_replacer(
     If output_filename is filled, a json file will be saved too.
     """
     if isinstance(input_json, str):
-        input_json = json.load(open(input_json))
+        with open(input_json) as f:
+            input_json = json.load(f)
 
     if isinstance(tokens_json, str):
-        tokens_json = json.load(open(tokens_json))
+        with open(tokens_json) as f:
+            tokens_json = json.load(f)
 
     result = __json_replacer(input_json, tokens_json)
 
